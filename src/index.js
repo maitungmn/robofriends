@@ -13,6 +13,8 @@ import { searchRobots, requestRobots } from "./reducers";
 
 const logger = createLogger();
 const rootReducer = combineReducers({ searchRobots, requestRobots });
+
+// Thunk là một function được bao lại để tạm dừng nó cho đến khi được gọi
 const store = createStore(
   rootReducer,
   applyMiddleware(thunkMiddleware, logger)
