@@ -15,6 +15,12 @@ const logger = createLogger();
 const rootReducer = combineReducers({ searchRobots, requestRobots });
 
 // Thunk là một function được bao lại để tạm dừng nó cho đến khi được gọi
+// Chúng ta có thể viết action là một function thay vì bắt buộc là object
+// Redux-thunk không yêu cầu chúng ta phải hiểu thêm concept nào của riêng
+// nó để có thể sử dụng, tất cả vẫn là Redux. Ý tưởng cơ bản của Thunk là 
+// nếu cần kích hoạt side effects, hãy dùng chính actions. Một function
+// trả về một function có thể thực hiện mọi thứ mà async call cần 
+// và dispatch bất kì action nào ta muốn.
 const store = createStore(
   rootReducer,
   applyMiddleware(thunkMiddleware, logger)
