@@ -9,9 +9,9 @@ class CounterButton extends PureComponent {
   }
 
   // Prevent H1 from reload twice when data comes
-  shouldComponentUpdate(nextProps, nextState) {
-    return !!(this.state.count !== nextState.count)
-  }
+  // shouldComponentUpdate(nextProps, nextState) {
+  //   return !!(this.state.count !== nextState.count)
+  // }
 
   updateCount = () => {
     this.setState(state => {

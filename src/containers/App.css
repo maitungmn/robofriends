@@ -2,11 +2,13 @@
   font-family: "Facon Bold Italic";
   font-style: normal;
   font-weight: normal;
+  font-display: swap;
   src: local("Facon Bold Italic"), url("Facon.woff") format("woff");
 }
 
 h1 {
   font-family: "Facon Bold Italic";
+  font-display: swap;
   font-weight: 200;
   color: #0ccac4;
 }
